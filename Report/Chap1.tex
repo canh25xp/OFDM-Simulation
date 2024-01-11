@@ -5,18 +5,18 @@
 \setcounter{figure}{0}
 \setcounter{table}{0}
 
-This chapter focuses on providing the theoretical foundations and background knowledge necessary for understanding the concepts and methodologies discussed in the subsequent chapters of this project, including single-carrier modulation, FDM, OFDM, and CP. 
+This chapter focuses on providing the theoretical foundations and background knowledge necessary for understanding the concepts and methodologies discussed in the subsequent chapters of this project, including single-carrier modulation, FDM, OFDM, and CP.
 
 \subsection{Single-carrier modulation}
 % In digital communications, information is expressed in the form of bits. The term symbol refers to a collection, in various sizes, of bits \cite{Litwin2001}.
 % In Single-carrier modulation, only one Radio Frequency (RF) carrier is used to carry the information.
-In Single-carrier modulation, the signal is transmitted across the entire bandwidth $B$ \cite{OFDM2006}, meaning that only one carrier frequency is used to carry the information. The system's sampling frequency is equal to the bandwidth, and each symbol has a duration of:
+In Single-carrier modulation, the signal is transmitted across the entire bandwidth $B$ ~\cite{OFDM2006}, meaning that only one carrier frequency is used to carry the information. The system's sampling frequency is equal to the bandwidth, and each symbol has a duration of:
 \begin{equation}
     T_{SC} = \frac{1}{B}
     \label{eq:single-carrier}
 \end{equation}
 
-In Equation \ref{eq:single-carrier}, $T_{SC}$ is the symbol duration, measured in seconds (s); $B$ is the total bandwidth of the system, measured in Hertz (Hz). The power spectral density of the single-carrier transmission system is described in Figure \ref{fig:single-carrier}, in which the entire system is modulated with the carrier signal $f_0$. In broadband wireless communication, the radio channel is usually frequency-selective, meaning that the channel impulse response varies with frequency. The sampling frequency is very high, resulting in the sample duration $T_{SC}$ being very small, therefore single-carrier modulation technique has several disadvantages:
+In Equation ~\ref{eq:single-carrier}, $T_{SC}$ is the symbol duration, measured in seconds (s); $B$ is the total bandwidth of the system, measured in Hertz (Hz). The power spectral density of the single-carrier transmission system is described in Figure~\ref{fig:single-carrier}, in which the entire system is modulated with the carrier signal $f_0$. In broadband wireless communication, the radio channel is usually frequency-selective, meaning that the channel impulse response varies with frequency. The sampling frequency is very high, resulting in the sample duration $T_{SC}$ being very small, therefore single-carrier modulation technique has several disadvantages:
 
 \begin{itemize}
     \item Inter-symbol interference (ISI), caused by multipath fading. This is because the ratio of the maximal time delay of the channel $\tau_{max}$ to the symbol duration $T_{SC}$:
