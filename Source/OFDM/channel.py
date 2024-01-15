@@ -26,8 +26,8 @@ def group_bits_zero_pad(bits, bits_per_group):
     return bits_groups
 
 
-def S2P(bits_serial : np.ndarray, length : int, mu : int):
-    return bits_serial.reshape(length, mu)
+def S2P(bits_serial : np.ndarray, length : int, mu : int, order='F'):
+    return bits_serial.reshape(length, mu, order=order)
 
 
 def P2S(bits_parallel : np.ndarray):
@@ -63,8 +63,8 @@ def FFT(OFDM_RX, n=None):
     return np.fft.fft(OFDM_RX, n)
 
 
-def IFFT(OFDM_data):
-    return np.fft.ifft(OFDM_data)
+def IFFT(OFDM_data, n=None):
+    return np.fft.ifft(OFDM_data, n)
 
 
 def addCP(symbol, N):
